@@ -1,7 +1,7 @@
 body {
     min-width: 99vw;
     min-height: 100vh;
-    background-color: rgb(237, 235, 235);
+    /* background-color: rgb(237, 235, 235); */
     padding: 0;
     margin: 0;
     overflow-x: hidden;
@@ -376,7 +376,6 @@ nav ul {
     background: rgba(207, 206, 206, 0.79); 
     width: 10em;
 }
-
 #customerComms1 {
     color: var(--primary-color);
     text-align: left;
@@ -526,18 +525,18 @@ nav ul {
                         /* showcasing section  */
 section#showCasing {
     height: 40em;
-    background-color: blue;
+    /* background-color: blue; */
     justify-content: space-evenly;
     margin-top: 1em;
 }
 
 .showCaseSec {
     width: 49%;
-    background-color: yellow;
+    /* background-color: yellow; */
     gap: 1em;
 }
 .show {
-    background-color: brown;
+    /* background-color: brown; */
     width: 100%;
     height: 49%;
 }
@@ -564,6 +563,42 @@ section#showCasing {
 img.canWithFood {
     width: 22em;
     height: 18em;
+}
+#showCaseContentImg {
+    align-items: end;
+}
+#main-img-lg {
+    width: 70%;
+    height: 100%;
+    background-color: green;
+}
+#main-img-sm {
+    width: 50%;
+    aspect-ratio: 1/1;
+    background-color: peru;
+    left: -20%;
+    top: 15%;
+    border: 1em solid white;
+    box-sizing: border-box;
+    object-fit: contain;
+
+    img[alt="smImg"] {
+        object-fit: cover;
+    }
+}
+
+#showCaseContentTxt{
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    h3 {
+        font-size: 1em;
+        font-weight: 600;
+    }
+    a {
+        align-items:center;
+        gap: 1em;
+    }
 }
 
 
