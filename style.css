@@ -526,7 +526,7 @@ section#showCasing {
     height: 40em;
     /* background-color: blue; */
     justify-content: space-evenly;
-    margin-top: 1em;
+    margin-top: 10em;
 }
 
 .showCaseSec {
@@ -599,8 +599,66 @@ img.canWithFood {
         gap: 1em;
     }
 }
-
-
+                        /* products heroCasing  */
+section#heroCasing {
+    height: 25em;
+    background-color: rgba(225, 225, 225, 0.584);
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(164, 164, 164, 0.826);
+    border-radius: 1em;
+    overflow: hidden;
+    margin-bottom: 5em;
+    .mainBtn {
+        width: 8em;
+    }
+}
+section#heroCasing > div[class="p-abs"] {
+    z-index: 1;
+}
+#heroCasingTxt{
+    width: 24em;
+    text-align: center;
+    margin-bottom: 2em;
+    h1 {
+        font-family: crimsonRegular;
+        font-size: 2.8em;
+        margin: 0.5em 0em;
+        line-height: 1em;
+        letter-spacing: 2px;
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+    p {
+        font-size: 0.9em;
+        width: 75%;
+        margin: auto;
+        line-height: 2em;
+        font-weight: 600;
+    }
+}
+#heroCanRed, #heroCanYell {
+    width: 30em;
+    aspect-ratio: 1/1;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+#boostBtn:hover a {
+    color: white;
+    padding: 0.5em 2em;
+}
+#heroCanRed{
+    left: -10%;
+    top: 10%;
+    transform: rotate(-15deg);
+}
+#heroCanYell {
+    right: -18%;
+    top: -40%;
+    transform: rotate(15deg);
+}
 
 /* ======= Media Queries ======== */
 @media (max-width: 1250px) {
