@@ -173,7 +173,7 @@ body {
 /* FOCUS SECTION */
 
 
-#focusSection {
+.focusSection {
     background-color: var(--primary-color);
     height: 2em;
     padding: 0.1em 0.2em 0.4em 0.2em;
@@ -672,9 +672,89 @@ section#FoundersCompliment > div[class="flex-row"]  {
         min-width: 460px;
     }
 }
+                /* footerImges  */
+#footImgs {
+    height: 18em;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+.footerImg {
+    width: 256px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+                /* footerLinks  */
+section#FooterLinks {
+    width: 100vw;
+    height: 25em;
+    justify-content: center;
+}
+
+#Flinks, #FooterLogo {
+    width: 50%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.FlinksPill {
+    width: 40%;
+    height: 80%;
+    align-items: start;
+    justify-content: center;
+}
+#logoF {
+    width: 80%;
+    height: 50%;
+}
+#FooterLogo {
+    align-items: start;
+    justify-content: center;
+    width: 40%;
+}
+#BrandLine {
+    width: 65%;
+}
+
+.FlinksContent {
+    width: 100%;
+    align-items: start;
+    h3 {
+        width: 100%;
+        text-align: left;
+    }
+    ul li {
+        width: 100%;
+        text-align: start;
+    }
+}
+
+#footerContent {
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid rgba(111, 110, 110, 0.792);
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+}
+.foot {
+    height: 100%;
+    width: 20%;
+    padding-right: 1em;
+    border-right: 1px solid rgba(111, 110, 110, 0.792);
+    h2 {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+}
 
 
-/* ======= Media Queries ======== */
+                /* ======= Media Queries ======== */
+
+
 @media (max-width: 1250px) {
             /* hero section queries */
 
@@ -983,6 +1063,10 @@ section#FoundersCompliment > div[class="flex-row"]  {
             min-width: 250px;
         }
     }
+
+    #footImgs {
+        height: 13em;
+    }
 }
 
 @media (max-width: 450px) {
@@ -1061,6 +1145,17 @@ section#FoundersCompliment > div[class="flex-row"]  {
     #heroCasing {
         gap: 2em;
         margin-bottom: 2em;
+    }
+    #footImgs {
+        height: 15em;
+        flex-wrap: wrap;
+    }
+    .footerImg {
+        width: 124px;
+    }
+    #footBtns {
+        flex-direction: column !important;
+        margin-bottom: 1em;
     }
 }
 
