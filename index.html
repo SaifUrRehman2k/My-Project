@@ -259,8 +259,8 @@
 
         </div>
 
-        <div class="flex-col showCaseSec" id="showCaseContent">
-            <div id="showCaseContentImg" class="show flex-col">
+        <div class="flex-col showCaseSec" id="showCaseContent" >
+            <div id="showCaseContentImg" class="show flex-col" style="height: 60%;">
                 <div id="main-img-lg" class="p-rel">
                     <img src="./assets/images/canonbooks.jpg" loading="lazy" alt="lgImg" width="100%" height="100%">
                     <div id="main-img-sm" class="p-abs">
@@ -269,7 +269,7 @@
                 </div>
             </div>
 
-            <div id="showCaseContentTxt" class="show flex-row">
+            <div id="showCaseContentTxt" class="show flex-row" style="height: 20%;">
                 <div class="flex-col" style="justify-content: center;width: 60%; height: 100%;">
                     <h3>
                         A special blend of Taurine, and Vitamins
@@ -289,15 +289,20 @@
         <div class="p-abs" id="heroCanRed">
             <img src="./assets/images/nobgRed.png" alt="">
         </div>
+        <div class="p-abs" id="heroCanYell">
+            <img src="./assets/images/nobgYellow.png" alt="">
+        </div>
 
-        <div id="boostBtn">
+        <div id="boostBtn" class="z-index-1">
             <a href="#" class="mainBtn transition200">Boost energy</a>
         </div>
-        <div class="flex-col" id="heroCasingTxt">
+
+        <div class="flex-col z-index-1" id="heroCasingTxt">
             <h1>Turning fantasies into reality.</h1>
             <p>The full Strength of Mana is comes from naturally infused Taurines</p>
         </div>
-        <div class="mainBtn flex-row transition200">
+
+        <div class="mainBtn flex-row transition200 z-index-1">
             <a href="#" class="flex-row row-align" style="justify-content: space-between; width: 100%;">
                 <span>Drink it Up</span>
                 <div class="circle" style="padding: 0.2em;">
@@ -308,13 +313,44 @@
             </a>
         </div>
 
-        <div class="p-abs" id="heroCanYell">
-            <img src="./assets/images/nobgYellow.png" alt="">
-        </div>
-
         <div class="p-abs" style="bottom: -2%; left: 70%;">
             <img src="./assets/icons/deciduous-tree.png" alt="">
         </div>
-    </section>          
+    </section>  
+    
+    <section id="FoundersCompliment" class="container flex-row">
+
+        <div class="flex-col" style="width: 40%; justify-content: center; gap: 0em; margin: 0em auto;">
+
+            <div class="mainBtn flex-row row-align p-rel" style="width: 5em; z-index: 1;">
+                <div class="p-abs" style="left: -37%; top: -80%; z-index: -1;">
+                    <img src="./assets/icons/quote-outline_.png" alt="" width="80px" height="80px" style="transform: rotate(180deg); z-index: -1; opacity: 0.4;">
+                </div>
+                <a href="#">
+                    Our Story
+                </a>
+            </div>
+
+            <div>
+                <h3 style="font-size: 2em; font-family: crimsonRegular;">
+                    The benefits of a healthy drink are more important than ever in today's world, So we created one.
+                </h3>
+            </div>
+
+            <div class="flex-row row-align" style="width: 10em;">
+                <div class="lg-circle"></div>
+                <div>
+                    <h4 class="m-none flex-row">Rylic Jason</h4> 
+                    <small class="m-none flex-row">Founder of Mana</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-row" style="width: 50%;">
+            <img src="./assets/images/dreamCasing.png" alt="" width="100%" style="aspect-ratio: 1/1;">
+        </div>
+        
+    </section>
+    
 </body>
 </html>

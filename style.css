@@ -163,9 +163,8 @@ body {
 .transition200 {
     transition: all 200ms linear;
 }
-
-#flavDropdown {
-    display: none;
+.z-index-1 {
+    z-index: 1;
 }
 
 
@@ -640,6 +639,7 @@ section#heroCasing > div[class="p-abs"] {
 #heroCanRed, #heroCanYell {
     width: 30em;
     aspect-ratio: 1/1;
+    z-index: -1;
     img {
         width: 100%;
         height: 100%;
@@ -659,6 +659,20 @@ section#heroCasing > div[class="p-abs"] {
     top: -40%;
     transform: rotate(15deg);
 }
+
+                /* Founder compliment  */
+section#FoundersCompliment  {
+    height: 30em;
+    div[class="flex-col"] > div[class="mainBtn"] {
+        padding: 0.5em 0em !important;
+    }
+}
+section#FoundersCompliment > div[class="flex-row"]  {
+    img {
+        min-width: 460px;
+    }
+}
+
 
 /* ======= Media Queries ======== */
 @media (max-width: 1250px) {
@@ -711,6 +725,18 @@ section#heroCasing > div[class="p-abs"] {
         }
     }
 
+                /* founders compliment  */
+    section#FoundersCompliment {
+        flex-flow: column nowrap;
+        height: 48em;
+        justify-content: space-between;
+    }
+    #FoundersCompliment > div[class="flex-col"] {
+        width: 90% !important;
+    }
+   
+
+                /* hero sec  */
     #thirdHeroBox {
         width: 90%;
         font-size: small;
@@ -809,8 +835,8 @@ section#heroCasing > div[class="p-abs"] {
                 /* showcasing section queries */
 
     section#showCasing {
-        flex-flow: column wrap;
-        height: 80em;
+        flex-flow: column nowrap;
+        height: 90em;
         justify-content: space-between;
     }
     #showCaseMain {
@@ -818,6 +844,8 @@ section#heroCasing > div[class="p-abs"] {
     }
     #showCaseImg {
         height: 100%;
+        object-fit: contain;
+        width: 90%;
     }
     .showCaseSec {
         flex-flow: column nowrap;
@@ -851,6 +879,20 @@ section#heroCasing > div[class="p-abs"] {
             text-align: center;
         }
     }
+    #showCaseContentTxt {
+        height: 10%;
+    }
+
+                    /* heroCasing  */
+    #heroCanRed {
+        bottom: -20%;
+        left: -24%;
+        z-index: -1;
+    }
+    #heroCanYell {
+        right: -30%;
+        top: -50%;
+    }
 }
 
 @media (max-width: 750px) {
@@ -863,6 +905,23 @@ section#heroCasing > div[class="p-abs"] {
             text-align: center;
         }
     }
+    section#showCasing {
+        height: 70em;
+        justify-content: center;
+    }
+    #showCaseContent {
+        gap: 3em;
+    }
+
+                /* hero cans  */
+    #heroCanRed,#heroCanYell{
+        width: 20em;
+        height: 22em;
+    }
+    #heroCanYell{
+        right: -25%;
+        top: -15%;
+    }
 }
 
 @media (max-width: 550px) {
@@ -870,6 +929,10 @@ section#heroCasing > div[class="p-abs"] {
         font-size: x-small;
         flex-wrap: wrap;
         height: 8em;
+    }
+    #showCaseImg {
+        object-fit: contain;
+        width: 100%;
     }
 
     .itemF {
@@ -908,6 +971,18 @@ section#heroCasing > div[class="p-abs"] {
         gap: 6px;
         margin: auto;
     }
+    section#FoundersCompliment { 
+        justify-content: center;
+        gap: 3em;
+        div[class="flex-row"]{
+            width: 80vw;
+        }
+    }
+    section#FoundersCompliment > div[class="flex-row"]  {
+        img {
+            min-width: 250px;
+        }
+    }
 }
 
 @media (max-width: 450px) {
@@ -928,6 +1003,11 @@ section#heroCasing > div[class="p-abs"] {
     .productTile {
         width: 15em;
     }
+                /* heroCans  */
+    #heroCanRed,#heroCanYell{
+        filter: opacity(0.5);
+    }
+       
 }
 
 @media (max-width: 400px) {
@@ -963,6 +1043,24 @@ section#heroCasing > div[class="p-abs"] {
         img[alt="smImg"] {
             object-fit: cover;
         }
+    }
+    section#showCasing {
+        height: 74em;
+        justify-content: space-around;
+        margin-top: 2em;
+    }
+    #heroCasingTxt {
+        width: 100%;
+        h1 {
+            font-size: 1.5em;
+        }
+        p {
+            font-size: 0.8em;
+        }
+    }
+    #heroCasing {
+        gap: 2em;
+        margin-bottom: 2em;
     }
 }
 
