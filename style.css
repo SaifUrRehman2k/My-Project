@@ -166,6 +166,9 @@ body {
 .z-index-1 {
     z-index: 1;
 }
+.border-round {
+    border-radius: 50%;
+}
 
 
 
@@ -705,8 +708,8 @@ section#FooterLinks {
     justify-content: center;
 }
 #logoF {
-    width: 80%;
-    aspect-ratio: 4/3;
+    width: 60%;
+    aspect-ratio: 2/1;
     max-width: 500px;
     min-width: 200px;
 }
@@ -1036,8 +1039,9 @@ section#FooterLinks {
     }
     .FlinksContent {
         width: 100%;
+        font-size: small;
         h1 {
-            font-size: 1.8em;
+            font-size: medium;
         }
     }  
 }
@@ -1070,6 +1074,16 @@ section#FooterLinks {
         top: -15%;
     }
                 /* footer  */
+    #FooterLogo {
+        height: 30%;
+    }
+    #Flinks {
+        height: 50%;
+        margin: 0em auto;
+    }
+    .FlinksPill {
+        height: 30%;
+    }
     #footerContent {
         width: 100%; 
     }
@@ -1137,13 +1151,22 @@ section#FooterLinks {
     }
     section#FoundersCompliment > div[class="flex-row"]  {
         img {
-            min-width: 250px;
+            min-width: 150px;
         }
     }
-
+                /* footer  */
+    section#FooterLinks {
+        margin-top: 5em;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
     #footImgs {
         height: 13em;
     }
+    .FlinksContent ul{
+        font-size: smaller;
+    }
+    
 }
 
 @media (max-width: 450px) {
@@ -1235,16 +1258,21 @@ section#FooterLinks {
         margin-bottom: 1em;
     }
                 /* foter  */
-    #footerContent {
-        width: 100%;
-    }
     .foot {
         width: 25%;
         padding: 0%;
+        border-radius: 0% !important;
         h2 {
             letter-spacing: 0px;
-            font-size: em;
+            font-size: smaller;
         }
+    }
+    #footerContent {
+        border-radius: 4px;
+    }
+    footer{
+        width: 100vw;
+
     }
 }
 
@@ -1285,6 +1313,15 @@ section#FooterLinks {
         }
         h3 {
             width: 150%;
+        }
+    }
+    #FoundersCompliment {
+        div[class="flex-row"] {
+            width: 150px !important;
+            height: 200px;
+            img {
+                width: 100% !important;
+            }
         }
     }
                 /* product section queries */
