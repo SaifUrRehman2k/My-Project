@@ -706,7 +706,9 @@ section#FooterLinks {
 }
 #logoF {
     width: 80%;
-    height: 50%;
+    aspect-ratio: 4/3;
+    max-width: 500px;
+    min-width: 200px;
 }
 #FooterLogo {
     align-items: start;
@@ -723,6 +725,10 @@ section#FooterLinks {
     h3 {
         width: 100%;
         text-align: left;
+    }
+    h1 {
+        font-size: 3em;
+        margin: 0%;
     }
     ul li {
         width: 100%;
@@ -857,6 +863,30 @@ section#FooterLinks {
         width: 30%;
         height: 70%;
     }
+
+
+                    /* footer */
+    section#FooterLinks {
+        height: 45em;
+        flex-flow: column nowrap;
+    }
+    #BrandLine {
+        width: 90% !important;
+        margin: 0% !important;
+        text-align: center;
+    }
+    #Flinks, #FooterLogo {
+        width: 100%;
+        height: 50%;
+        align-items: center;
+    }  
+    #FlinksPill {
+        width: 80%;
+        align-items: center;
+    }
+    .FlinksContent {
+        width: 100%;
+    }    
 }
 
 @media (max-width: 800px) {
@@ -973,6 +1003,43 @@ section#FooterLinks {
         right: -30%;
         top: -50%;
     }
+                    /* footer  */
+    section#FooterLinks {
+        height: 65em;
+        flex-flow: column nowrap;
+    }
+    #BrandLine {
+        width: 90%;
+        margin: 0%;
+        text-align: center;
+    }
+    
+    #Flinks, #FooterLogo {
+        width: 100%;
+        height: 50%;
+        align-items: center;
+    }  
+    #FooterLogo {
+        order: 1;
+    }
+    #Flinks {
+        order: 2;
+        width: 80vw;
+        margin: auto;
+        flex-flow: column nowrap;
+    }
+    .FlinksPill {
+        width: 100%;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .FlinksContent {
+        width: 100%;
+        h1 {
+            font-size: 1.8em;
+        }
+    }  
 }
 
 @media (max-width: 750px) {
@@ -1002,10 +1069,20 @@ section#FooterLinks {
         right: -25%;
         top: -15%;
     }
+                /* footer  */
+    #footerContent {
+        width: 100%; 
+    }
+    .foot {
+        h2 {
+            letter-spacing: 0px;
+            font-size: 1em;
+        }
+    }
 }
 
 @media (max-width: 550px) {
-    #focusSection {
+    .focusSection {
         font-size: x-small;
         flex-wrap: wrap;
         height: 8em;
@@ -1156,6 +1233,18 @@ section#FooterLinks {
     #footBtns {
         flex-direction: column !important;
         margin-bottom: 1em;
+    }
+                /* foter  */
+    #footerContent {
+        width: 100%;
+    }
+    .foot {
+        width: 25%;
+        padding: 0%;
+        h2 {
+            letter-spacing: 0px;
+            font-size: em;
+        }
     }
 }
 
