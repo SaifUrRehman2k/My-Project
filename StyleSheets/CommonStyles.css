@@ -1,0 +1,200 @@
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.row-align {
+    align-items: center;
+    justify-content: space-around;
+}
+
+.gap {
+    row-gap: 8px;
+}
+
+.container {
+    width: 90%;
+    margin: 0em auto;
+}
+
+.p-none {
+    padding: 0;
+}
+
+.m-none {
+    margin: 0;
+}
+
+.mainBtn, .mainBtn2 {
+    height: 2.6em;
+    border: 1px solid var(--primary-color);
+    border-radius: 4em;
+    width: 8em;
+    right: 0;
+    bottom: 40%;
+    z-index: 100;
+    gap: 1em;
+    padding: 0.1em;
+}
+
+.mainBtn{
+    a {
+        justify-content: space-evenly;
+        width: 100%;
+        height: 100%;
+        border-radius: 4em;
+    }
+}
+.mainBtn:hover {
+    background-image: conic-gradient(
+    from var(--gradient-angle),
+    var(--primary-color),
+    var(--tertiary-color),
+    var(--secondry-color)
+    );
+    transition: all 200ms linear;
+    animation: mainBtnHover 800ms forwards 0s infinite;
+    cursor: pointer;
+    border: transparent;
+    background-clip: border-box;
+    a {
+        background-color: rgb(248, 218, 218);
+    }
+
+    a>div.circle {
+        background-color: var(--secondry-color);
+    }
+}
+@keyframes mainBtnHover {
+    0% {
+        --gradient-angle: 0deg;
+    }
+    100% {
+        --gradient-angle: 360deg;
+    }
+}
+
+.mainBtn2 {
+    height: 2em;
+    padding: 0.1em 0.2em;
+    position: static;
+    align-items: center;
+    justify-content: center;
+}
+.mainBtn2:hover {
+    background-color: rgba(255, 156, 156, 0.671);
+    transform: scaleX(1.1);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.lg-p {
+    font-size: large;
+}
+
+.shadow {
+    box-shadow: 3px 5px 7px rgba(99, 96, 96, 0.929);
+}
+
+.img-contain,
+.img-cover {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-contain {
+    background-size: contain;
+}
+
+.img-cover {
+    background-size: cover;
+}
+
+.bg-blue {
+    background-color: blue;
+}
+
+.row-100 {
+    width: 100%;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.p-abs {
+    position: absolute;
+}
+
+.p-rel {
+    position: relative;
+}
+
+.onHoverProdIcons {
+    display: none;
+}
+
+.circle {
+    width: 24px;
+    height: 24px;
+}
+
+.lg-circle {
+    width: 40px;
+    height: 40px;
+}
+
+.lg-circle,
+.circle {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    transition: all 200ms linear;
+}
+
+.Lstyle-none {
+    list-style: none;
+}
+
+.transition200 {
+    transition: all 200ms linear;
+}
+.z-index-1 {
+    z-index: 1;
+}
+.border-round {
+    border-radius: 50%;
+}
+#sidebar {
+    position: fixed;
+    width: 350px;
+    height: 100vh;
+    background-color: rgba(59, 6, 6, 0.871);
+    z-index: 99999;
+    right: -400px;
+    top: 0%;
+    padding: 1em;
+    transition: all 500ms ease;
+    box-shadow: -2px 0px 5px black;
+}
+#sidebar ul {
+    width: 80%;
+    height: 80%;
+    align-items: flex-start;
+    justify-content: start;
+    color: white;
+    li {
+        width: 100%;
+        padding: 0.2em;
+        border-bottom: 1px solid rgba(178, 177, 177, 0.776);
+        font-size: large;
+    }
+    li:hover {
+        background-color: rgba(110, 108, 108, 0.735);
+        cursor: pointer;
+    }
+}

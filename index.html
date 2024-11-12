@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Project</title>
+    <link rel="stylesheet" href="./StyleSheets/CommonStyles.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./StyleSheets/MediaQueries.css">
     <script src="script.js"></script>
 </head>
 <body>
@@ -69,14 +71,44 @@
                 </ul>
             </div>
             
+            <div id="sidebar" class="flex-col">
+                <ul class="flex-col p-abs">
+                    <li onclick="sidebarClose()" style="border: none; width: 24px; height: 24px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 -960 960 960" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                    </li>
+
+                    <li id="sideDrop" style="border: none;">
+                        <details class="sideItem flex-row row-align">
+                            <summary>
+                                Flavours
+                                <svg class="transition200" xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 16 16">
+                                    <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 5.75L8 10.25l4.25-4.5"/>
+                                </svg>
+                            </summary>
+                                <ul class="flex-col">
+                                    <li><a class="flex-row row-align gap" href="#"><img src="./assets/icons/lemon_.png" alt="">Lemon</a></li>
+                                    <li><a class="flex-row row-align gap" href="#"><img src="./assets/icons/mango_.png" alt="">Mango</a></li>
+                                    <li><a class="flex-row row-align gap" href="#"><img src="./assets/icons/cherries_.png" alt="">Cherry</a></li>
+                                    <li><a class="flex-row row-align gap" href="#">More... </a></li>
+                                </ul>
+                        </details>
+                    </li>
+                    <li class="sideItem transition200">Shop</li>
+                    <li class="sideItem transition200">Story</li>
+                    <li class="sideItem transition200">Blog</li>
+                    <li class="sideItem transition200">Community</li>
+                </ul>
+            </div>
 
             <div class="flex-row row-align" class="flex-row row-align" style="gap: 0.5em;">
-                <div id="hamburger">
+                <div onclick="sideBarOpen()" id="hamburger" class="flex-row row-align">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#696969"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
                 </div>
                 <div id="cart" class="flex-row row-align">
                     <h3>Cart</h3>
-                    <div class="circle"></div>
+                    <div class="circle flex-row row-align" style="background-color: transparent;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="#000" d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1M18 6H4.27l2.55 6H15c.33 0 .62-.16.8-.4l3-4c.13-.17.2-.38.2-.6a1 1 0 0 0-1-1m-3 7H6.87l-.77 1.56L6 15a1 1 0 0 0 1 1h11v1H7a2 2 0 0 1-2-2a2 2 0 0 1 .25-.97l.72-1.47L2.34 4H1V3h2l.85 2H18a2 2 0 0 1 2 2c0 .5-.17.92-.45 1.26l-2.91 3.89c-.36.51-.96.85-1.64.85Z"/></svg>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -87,7 +119,7 @@
                     <div id="heroOverlay" class="p-rel">
                         <h1>Just say goodbye to being thirsty.</h1>
                         <div class="mainBtn flex-row row-align p-abs transition200">
-                            <a href="#" class="flex-row row-align" style="gap: 1em;">Drink it Up
+                            <a href="#" class="flex-row row-align">Drink it Up
                                 <div class="circle" style="padding: 0.2em;">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="undefined" height="undefined" viewBox="-5 -5 24 24">
                                         <path fill="#ffffff" d="m10.586 5.657l-3.95-3.95A1 1 0 0 1 8.05.293l5.657 5.657a.997.997 0 0 1 0 1.414L8.05 13.021a1 1 0 1 1-1.414-1.414l3.95-3.95H1a1 1 0 1 1 0-2h9.586z"/>
@@ -187,11 +219,15 @@
 
             <div class="productTile p-rel img-contain" id="greenCan">
                 <div class="onHoverProdIcons flex-row">
-                    <div class="circle">
+                    <div class="prdBtns flex-row row-align">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="currentColor" d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2zm6 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2zM6 10c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2z"/></svg>   
                     </div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
+                    <div class="prdBtns flex-row row-align">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 16 16"><path fill="currentColor" d="m8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385c.92 1.815 2.834 3.989 6.286 6.357c3.452-2.368 5.365-4.542 6.286-6.357c.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/></svg>      
+                    </div>
+                    <div class="prdBtns flex-row row-align">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 16 16"><path fill="currentColor" d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/></svg>
+                    </div>
                 </div>
 
                 <div class="rating flex-row p-abs bg-white">
@@ -208,11 +244,15 @@
 
             <div class="productTile p-rel img-contain" id="yellowCan">
                 <div class="onHoverProdIcons flex-row">
-                    <div class="circle">
+                    <div class="prdBtns flex-row row-align">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="currentColor" d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2zm6 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2zM6 10c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2z"/></svg>
                     </div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
+                    <div class="prdBtns flex-row row-align">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 16 16"><path fill="currentColor" d="m8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385c.92 1.815 2.834 3.989 6.286 6.357c3.452-2.368 5.365-4.542 6.286-6.357c.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/></svg>
+                    </div>
+                    <div class="prdBtns flex-row row-align">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 16 16"><path fill="currentColor" d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/></svg>
+                    </div>
                 </div>
                 
                 <div class="rating flex-row p-abs bg-white">
@@ -229,11 +269,15 @@
 
             <div class="productTile p-rel img-contain" id="redCan">
                 <div class="onHoverProdIcons flex-row ">
-                    <div class="circle">
+                    <div class="prdBtns flex-row row-align">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="currentColor" d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2zm6 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2zM6 10c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2z"/></svg>
                     </div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
+                    <div class="prdBtns flex-row row-align">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 16 16"><path fill="currentColor" d="m8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385c.92 1.815 2.834 3.989 6.286 6.357c3.452-2.368 5.365-4.542 6.286-6.357c.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/></svg>
+                    </div>
+                    <div class="prdBtns flex-row row-align">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 16 16"><path fill="currentColor" d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/></svg>
+                    </div>
                 </div>
                 
                 <div class="rating flex-row p-abs bg-white">
@@ -305,8 +349,11 @@
             <img src="./assets/images/nobgYellow.png" alt="">
         </div>
 
-        <div id="boostBtn" class="z-index-1">
-            <a href="#" class="mainBtn transition200">Boost energy</a>
+        <div class="z-index-1 mainBtn2 flex-row row-align transition200">
+            <a href="#" class="flex-row row-align" style="gap: 0.5em;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 16 16"><path fill="#000" d="M8 11a3 3 0 1 1 0-6a3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/></svg>
+                Boost energy
+            </a>
         </div>
 
         <div class="flex-col z-index-1" id="heroCasingTxt">
@@ -314,9 +361,8 @@
             <p>The full Strength of Mana is comes from naturally infused Taurines</p>
         </div>
 
-        <div class="mainBtn flex-row transition200 z-index-1">
-            <a href="#" class="flex-row row-align" style="justify-content: space-between; width: 100%;">
-                <span>Drink it Up</span>
+        <div class="mainBtn flex-row z-index-1">
+            <a href="#" class="flex-row row-align">Drink it Up
                 <div class="circle" style="padding: 0.2em;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="undefined" height="undefined" viewBox="-5 -5 24 24">
                         <path fill="#ffffff" d="m10.586 5.657l-3.95-3.95A1 1 0 0 1 8.05.293l5.657 5.657a.997.997 0 0 1 0 1.414L8.05 13.021a1 1 0 1 1-1.414-1.414l3.95-3.95H1a1 1 0 1 1 0-2h9.586z"/>
@@ -334,13 +380,14 @@
 
         <div class="flex-col" style="width: 40%; justify-content: center; gap: 0em; margin: 0em auto;">
 
-            <div class="mainBtn flex-row row-align p-rel" style="width: 5em; z-index: 1;">
-                <div class="p-abs" style="left: -37%; top: -80%; z-index: -1;">
+            <div class="flex-row row-align p-rel" style="z-index: 1; width: 10em; height: 5em;">
+                <div class="p-abs" style="left: -20%; top: -20%; z-index: -1;">
                     <img src="./assets/icons/quote-outline_.png" alt="" width="80px" height="80px" style="transform: rotate(180deg); z-index: -1; opacity: 0.4;">
                 </div>
-                <a href="#">
+                <a href="#" class="mainBtn2 flex-row row-align">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 16 16"><path fill="currentColor" d="m8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385c.92 1.815 2.834 3.989 6.286 6.357c3.452-2.368 5.365-4.542 6.286-6.357c.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/></svg>
                     Our Story
-                </a>
+                </a>                
             </div>
 
             <div>
@@ -367,12 +414,14 @@
     <section id="footerImages">
         <div class="flex-row row-align" style="justify-content: center; gap: 1em;" id="footBtns">
             <div class="mainBtn flex-row row-align">
-                <a href="#" class="flex-row row-align" style="gap: 1em;">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z"/></svg>
+                <a href="#" class="flex-row row-align">                    
                     On Social
+                    <div 
+                    style="padding: 0.2em;">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z"/></svg>
+                    </div>
                 </a>
             </div>
-
             <div class="flex-row">
                 <h1>
                     <a href="#" class="flex-row row-align">
@@ -510,7 +559,6 @@
                 <p>15% off on <strong>$100 purchase</strong></p>
             </div>
         </div>
-
 
 </body>
 </html>
