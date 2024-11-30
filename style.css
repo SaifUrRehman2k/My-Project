@@ -22,41 +22,7 @@ body {
     }
 }
 
-* {
-    font-family: Arial, Helvetica, sans-serif;
-}
 
-
-:root {
-    --primary-color: rgb(59, 6, 6);
-    --secondry-color: rgb(249, 151, 151);
-    --tertiary-color: rgb(255, 108, 108);
-}
-
-@font-face {
-    font-family: crimsonRegular;
-    src: url(./assets/fonts/CrimsonText-Regular.ttf);
-}
-
-@font-face {
-    font-family: crimsonBold;
-    src: url(./assets/fonts/CrimsonText-Bold.ttf);
-}
-
-@font-face {
-    font-family: crimsonItalic;
-    src: url(./assets/fonts/CrimsonText-Italic.ttf);
-}
-
-@font-face {
-    font-family: crimsonSemi;
-    src: url(./assets/fonts/CrimsonText-SemiBold.ttf);
-}
-@property --gradient-angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-}
 
 /* FOCUS SECTION */
 
@@ -417,6 +383,20 @@ nav ul {
     background-image: url(./assets/images/red\ can.jpg.png);
     background-color: hsl(323, 100%, 81%);
 }
+#top-Arrow {
+    position: sticky;
+    height: 0;
+    right: 40%;
+    top: 90%;
+    z-index: 999;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    svg {
+        padding-right: 3em;
+
+    }
+}
 
 
                         /* showcasing section  */
@@ -560,13 +540,19 @@ section#heroCasing > div[class="p-abs"] {
 }
 
                 /* Founder compliment  */
-section#FoundersCompliment  {
+section#FoundersCompliment,
+section#FoundersCompliment2,
+section#FoundersCompliment3,
+section#FoundersCompliment4 {
     height: 30em;
     div[class="flex-col"] > div[class="mainBtn"] {
         padding: 0.5em 0em !important;
     }
 }
-section#FoundersCompliment > div[class="flex-row"]  {
+section#FoundersCompliment > div[class="flex-row"] ,
+section#FoundersCompliment2 > div[class="flex-row"] ,
+section#FoundersCompliment3 > div[class="flex-row"],
+section#FoundersCompliment4 > div[class="flex-row"] {
     img {
         min-width: 460px;
     }

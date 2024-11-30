@@ -1,0 +1,96 @@
+#heroBottom {
+    height: 18em !important;
+}
+.products {
+    height: 80em;
+    margin-top: 10em;
+}
+.productsCategoryHead {
+    width: 90vw;
+    margin: 2em auto;
+    color: var(--primary-color);
+    padding: 3px;
+    position: relative;
+    span {
+        font-family: crimsonBold;
+        letter-spacing: 2px;
+        font-size: 4vw;
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    span::after {
+        content: "";
+        display: inline-block;
+        width: 60%;
+        height: 5px;
+        background-color: var(--primary-color);
+
+    }
+}
+
+div#cansImg {
+    background-image: none;
+}
+#heroBottom {
+    img {
+        transform: rotate(15deg);
+        top: 15em;
+        animation: upDown 3s infinite alternate;
+        transition: all 1s ease-in;
+        z-index: -1;
+    }
+    /* img:hover {
+        animation: hoverRotate 1s 1 normal backwards;
+        animation: hoverRotate 4s alternate 800ms 1 both;
+    } */
+}
+#main-img-sm {
+    border: none !important;
+    left: -8em !important;
+}
+#sun {
+    animation: rotate360 5s normal 0s infinite forwards;
+}
+#sun:hover {
+    animation: rotate-360 5s normal 0s infinite forwards;
+}
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate-360 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+/* @keyframes hoverRotate {
+    0% {
+        transform: rotate(15deg);
+    }
+    20% {
+        transform: rotate(0deg);
+    }
+    40% {
+        transform: rotate(-90deg);
+    }
+    60% {
+        transform: rotate(-180deg);
+    }
+    80% {
+        transform: rotate(-270deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+} */
+

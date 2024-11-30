@@ -1,3 +1,56 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+:root {
+    --primary-color: rgb(59, 6, 6);
+    --secondry-color: rgb(249, 151, 151);
+    --tertiary-color: rgb(255, 108, 108);
+}
+
+@font-face {
+    font-family: crimsonRegular;
+    src: url(./assets/fonts/CrimsonText-Regular.ttf);
+}
+
+@font-face {
+    font-family: crimsonBold;
+    src: url(./assets/fonts/CrimsonText-Bold.ttf);
+}
+
+@font-face {
+    font-family: crimsonItalic;
+    src: url(./assets/fonts/CrimsonText-Italic.ttf);
+}
+
+@font-face {
+    font-family: crimsonSemi;
+    src: url(./assets/fonts/CrimsonText-SemiBold.ttf);
+}
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes upDown {
+    0% {
+        transform: translateY(0em) rotate(15deg);
+    }
+    50% {
+        transform: translateY(2em) rotate(15deg);
+
+    }
+    100% {
+        transform: translateY(0em) rotate(15deg);
+    }
+}
+
+img,h1,h2,a,li {
+    user-select: none;
+}
+
 .flex-row {
     display: flex;
     flex-direction: row;
@@ -197,4 +250,11 @@
         background-color: rgba(110, 108, 108, 0.735);
         cursor: pointer;
     }
+}
+.rotate180 {
+    transform: rotate(180deg);
+}
+.selceted {
+    color: var(--tertiary-color);
+    border-bottom: 1px solid var(--secondry-color);
 }

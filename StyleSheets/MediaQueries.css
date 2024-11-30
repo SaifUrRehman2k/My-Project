@@ -30,9 +30,16 @@
         display: none;
     }
 }
+@media (min-width: 950px) {
+    #aboutNavToggler {
+        display: none;
+    }
+}
 
 @media (max-width: 950px) {
-
+    .hide950 {
+        display: none;
+    }
     /* hero section queries */
     #heroBottom {
         flex-flow: column nowrap;
@@ -150,7 +157,59 @@
     .FlinksContent {
         width: 100%;
     }
+
+                /* about.css  */
+    section#intro > div {
+        flex-flow: column wrap !important;
+        gap: 1em;
+    }
+    div.card {
+        width: 60%;
+        height: 30em;
+        h3 {
+            margin-bottom: 0em;
+        }
+        p {
+            height: 50%;
+            overflow: hidden;
+            margin-bottom: 1em;
+        }
+    }
+ 
+    #aboutNav {
+        height: 0%;
+        opacity: 0.1;
+        animation: slideTopIn 200ms ease-in 0s 1 both;
+        ul {
+            flex-flow: column wrap;
+            gap: 1em;
+            margin: 0.5em;
+        }
+        ul li {
+            border: none !important;
+            border-bottom: 1px solid rgba(118, 116, 116, 0.756) !important;
+        }
+    }
+    /* #aboutNav:visited {
+    } */
+
+    div#longCard {
+        width: 90% !important;
+        height: 40em;
+        white-space: wrap;
+        margin: 5em auto;
+        .cardContent {
+            width: 50% !important;
+        }
+        .cardImg{
+            width: 40% !important;
+            img {
+                top: 0em;
+            }
+        }
+    }
 }
+
 
 @media (max-width: 800px) {
     /* hero section queries */
@@ -392,6 +451,41 @@
             font-size: 1em;
         }
     }
+
+                    /* about.css  */
+    div#longCard {
+        height: 60em;
+        .cardContent {
+            width: 100% !important;
+            height: 100%;
+            z-index: 9;
+            justify-content: end !important;
+            gap: 1em !important;
+        }
+        .cardImg{
+            margin-bottom: 5em;
+            width: 90% !important;
+            position: absolute;
+            z-index: -1;
+            height: 100% !important;
+            img {
+                left: 3em;
+                top: -2em;
+                width: 80% !important;
+
+            }
+        }
+    }
+
+                    /* blog.css  */
+    .blog {
+        height: 12em;
+        width: 100%;
+    }
+    #allBlogs {
+        height: 170em;
+        margin: 0.5em 0.2em;
+    }
 }
 
 @media (max-width: 550px) {
@@ -475,6 +569,30 @@
         font-size: smaller;
     }
 
+    /* blog.css  */
+    #allBlogs {
+        height: 300em;
+    }
+    
+    .blog {
+        flex-flow: column wrap;
+        height: 25em;
+    }
+    .blogImg {
+        height: 40%;
+        width: 100%;
+    }
+    div.blogContent {
+        width: 100%;
+        height: 50%;
+        justify-content: space-between;
+    }
+    .blogTitle {
+        width: 100%;
+        height: 6em;
+        overflow: hidden;
+    }
+
 }
 
 @media (max-width: 450px) {
@@ -501,6 +619,7 @@
     #heroCanYell {
         filter: opacity(0.5);
     }
+
 
 }
 
