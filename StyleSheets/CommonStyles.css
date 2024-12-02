@@ -47,6 +47,10 @@
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 img,h1,h2,a,li {
     user-select: none;
 }
@@ -131,6 +135,22 @@ img,h1,h2,a,li {
         --gradient-angle: 360deg;
     }
 }
+
+#top-Arrow {
+    position: sticky;
+    height: 0;
+    right: 40%;
+    top: 90%;
+    z-index: 999;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    svg {
+        padding-right: 3em;
+
+    }
+}
+
 
 .mainBtn2 {
     height: 2em;

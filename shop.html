@@ -10,6 +10,25 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./StyleSheets/MediaQueries.css">
     <script defer src="script.js"></script>
+    <style>
+        /* #top-Arrow {
+        position: sticky;
+        height: 0;
+        right: 40%;
+        top: 90%;
+        z-index: 999;
+        display: flex;
+        align-items: end;
+        justify-content: end;
+        svg {
+            padding-right: 3em;
+
+        }
+    } */
+
+    
+
+    </style>
 </head>
 
 <body>
@@ -113,8 +132,8 @@
                         </details>
                     </li>
                     <li class="sideItem transition200"><a style="color: white;" href="./index.html">Home</a></li>
-                    <li class="sideItem transition200"><a style="color: white;" href="./shop.html">Shop</a></li>
-                    <li class="selceted">Blog</li>
+                    <li class="selceted">Shop</li>
+                    <li class="sideItem transition200"><a style="color: white;" href="./blog.html"></a>Blog</a></li>
                     <li class="sideItem transition200"><a style="color: white;"  href="./story.html">Story</a></li>
                 </ul>
             </div>
@@ -160,12 +179,13 @@
             </div>
 
             <div id="heroBottom" class="flex-row row-align" style="height: 60%;">
-                    <img class="p-abs" src="./assets/images/nobgYellow.png" alt="" style="width: 36vw; left: 0%;">
-                    <img class="p-abs" src="./assets/images/nobgRed.png" alt="" style="width: 38vw;right: 0%;">
+                    <img class="p-abs floatImg1" src="./assets/images/nobgYellow.png" alt="" style="width: 36vw; left: 0%;">
+                    <img class="p-abs floatImg2" src="./assets/images/nobgRed.png" alt="" style="width: 38vw;right: 0%;">
             </div>
 
         </section>
-    </div>  
+    </div> 
+    
 
     <section class="products gap" style="background-color: rgba(247, 167, 167, 0.506); height: 100em;">
         <h2 class="productsCategoryHead" style="padding-top: 2em;">
@@ -408,6 +428,14 @@
         </div>
 
     </section>
+
+    <div id="top-Arrow">
+        <a href="#top">
+            <svg style="transform: rotate(-90deg);" xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#3f0b0b"><path d="m480-320 160-160-160-160-56 56 64 64H320v80h168l-64 64 56 56Zm0 240q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>      
+        </a>
+    </div>
+    
+    
 
     <section  class="container flex-row" id="showCasing">
         <div class="flex-col showCaseSec" id="showCaseMain">

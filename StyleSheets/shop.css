@@ -1,6 +1,7 @@
-#heroBottom {
-    height: 18em !important;
+body {
+    overflow-x: hidden;
 }
+
 .products {
     height: 80em;
     margin-top: 10em;
@@ -35,6 +36,7 @@ div#cansImg {
     background-image: none;
 }
 #heroBottom {
+    height: 18em !important;
     img {
         transform: rotate(15deg);
         top: 15em;
@@ -42,10 +44,6 @@ div#cansImg {
         transition: all 1s ease-in;
         z-index: -1;
     }
-    /* img:hover {
-        animation: hoverRotate 1s 1 normal backwards;
-        animation: hoverRotate 4s alternate 800ms 1 both;
-    } */
 }
 #main-img-sm {
     border: none !important;
@@ -94,3 +92,23 @@ div#cansImg {
     }
 } */
 
+@media (max-width: 500px) {
+    #heroOverlay {
+        h1 {
+            svg {
+                display: none;
+            }
+        }
+    }
+    #main-img-sm {
+        left: -2em !important;
+    }
+    section.products {
+        height: 200em !important;
+    }
+    .products-row {
+        height: 30% !important;
+    }
+
+    
+}

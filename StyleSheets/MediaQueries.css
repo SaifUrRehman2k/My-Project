@@ -34,6 +34,7 @@
     #aboutNavToggler {
         display: none;
     }
+    
 }
 
 @media (max-width: 950px) {
@@ -207,6 +208,17 @@
                 top: 0em;
             }
         }
+    }
+    #heroBottom {
+        .floatImg2 {
+            top: 25em !important;
+            right: 5em !important;
+        }
+        .floatImg1 {
+            top: 18em !important;
+            left: 5em !important;
+        }
+
     }
 }
 
@@ -527,12 +539,12 @@
         height: 1.4em;
     }
 
-    section#bestProductsSect {
+    section#bestProductsSect, section.products {
         width: 100%;
         height: 40em;
     }
 
-    #bestProducts {
+    #bestProducts, .products-row {
         height: 60%;
         align-items: center;
         gap: 6px;
@@ -598,12 +610,12 @@
 @media (max-width: 450px) {
     /* product section queries */
 
-    section#bestProductsSect {
+    section#bestProductsSect, section.products {
         height: 80em;
         justify-content: flex-start;
     }
 
-    #bestProducts {
+    #bestProducts, .products-row {
         flex-flow: column nowrap;
         height: 80%;
         align-items: center;
