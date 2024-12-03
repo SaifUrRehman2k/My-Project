@@ -137,17 +137,21 @@ img,h1,h2,a,li {
 }
 
 #top-Arrow {
-    position: sticky;
+    position: sticky !important;
+    width: 90vw;
     height: 0;
-    right: 40%;
     top: 90%;
     z-index: 999;
     display: flex;
-    align-items: end;
+    align-items: center;
     justify-content: end;
     svg {
         padding-right: 3em;
-
+        width: 24px !important;
+        height: 24px !important;
+        padding: 0em !important;
+        background-color: white;
+        border-radius: 50%;
     }
 }
 

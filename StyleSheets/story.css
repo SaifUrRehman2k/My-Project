@@ -2,6 +2,7 @@ body {
     overflow-x: hidden;
     min-width: 99vw;
 }
+
 #heroOverlay {
     h1 {
         margin-bottom: 0%;
@@ -94,6 +95,13 @@ h2.StoryHead {
                 width: 100%;
             }
         } 
+    }
+    .container {
+        margin: 1em 0em !important;   
+        padding: 1em 1em !important; 
+    }
+    h2.StoryHead {
+        box-sizing: border-box;
     }
 }
 @media (max-width: 550px) {
