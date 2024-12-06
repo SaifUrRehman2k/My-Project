@@ -6,6 +6,7 @@ function sidebarClose() {
     sidebar.style.right = "-400%";
 }
 
+
 let aboutNavBtn = document.getElementById("aboutNavToggler");
 let aboutArrow = document.getElementById("aboutArrow");
 let aboutNav = document.getElementById("aboutNav");

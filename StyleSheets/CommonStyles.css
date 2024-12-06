@@ -136,14 +136,15 @@ img,h1,h2,a,li {
     }
 }
 
+
 #top-Arrow {
-    position: sticky !important;
+    position: fixed !important;
     width: 90vw;
-    height: 0;
+    height: 10em;
     top: 90%;
     z-index: 999;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: end;
     svg {
         padding-right: 3em;
@@ -271,8 +272,14 @@ img,h1,h2,a,li {
         font-size: large;
     }
     li:hover {
-        background-color: rgba(110, 108, 108, 0.735);
         cursor: pointer;
+    }
+}
+li.sideItem {
+    a {
+        display: inline-block;
+        width: 100% !important;
+        text-align: start;
     }
 }
 .rotate180 {
