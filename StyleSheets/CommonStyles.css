@@ -11,22 +11,22 @@
 
 @font-face {
     font-family: crimsonRegular;
-    src: url(./assets/fonts/CrimsonText-Regular.ttf);
+    src: url(../assets/fonts/CrimsonText-Regular.ttf);
 }
 
 @font-face {
     font-family: crimsonBold;
-    src: url(./assets/fonts/CrimsonText-Bold.ttf);
+    src: url(../assets/fonts/CrimsonText-Bold.ttf);
 }
 
 @font-face {
     font-family: crimsonItalic;
-    src: url(./assets/fonts/CrimsonText-Italic.ttf);
+    src: url(../assets/fonts/CrimsonText-Italic.ttf);
 }
 
 @font-face {
     font-family: crimsonSemi;
-    src: url(./assets/fonts/CrimsonText-SemiBold.ttf);
+    src: url(../assets/fonts/CrimsonText-SemiBold.ttf);
 }
 @property --gradient-angle {
     syntax: "<angle>";
